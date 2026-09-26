@@ -4,3 +4,5 @@ const objeto = {"nome": "Ana", "idade": 20};
 
 console.log(objeto.nome); // "Ana"
 console.log(objeto.idade); // 20
+
+let nome = objeto.nome;
