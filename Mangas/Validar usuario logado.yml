@@ -1,0 +1,18 @@
+info:
+  name: Validar usuario logado
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: http://localhost:8081/api/v1/auth/me
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE1ODc2MDUsImV4cCI6MTc5MTU5MTIwNSwidXNlcl9pZCI6NH0.aAROElNdinmdoHflrjsvUiCo841DsHzq4K3Jq3NoGCA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,25 @@
+info:
+  name: Atualizar manga existente
+  type: http
+  seq: 18
+
+http:
+  method: PUT
+  url: http://localhost:8081/api/v1/mangas/2
+  body:
+    type: json
+    data: |-
+      {
+        "status":"completo",
+        "volumetoria":"34 volumes finalizados"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE1ODc2MDUsImV4cCI6MTc5MTU5MTIwNSwidXNlcl9pZCI6NH0.aAROElNdinmdoHflrjsvUiCo841DsHzq4K3Jq3NoGCA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

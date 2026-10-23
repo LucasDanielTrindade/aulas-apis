@@ -1,0 +1,20 @@
+info:
+  name: Busca textual por query param
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: http://localhost:8081/api/v1/mangas?busca=one
+  params:
+    - name: busca
+      value: one
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

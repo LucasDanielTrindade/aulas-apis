@@ -1,0 +1,35 @@
+info:
+  name: Cadastrar novo manga
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: http://localhost:8081/api/v1/mangas
+  body:
+    type: json
+    data: |-
+      {
+          "id": 1,
+          "titulo": "Ecos do Vazio",
+          "tipo": "manga",
+          "autor": "Akira Mizuhane",
+          "editora": "Hoshi Publishing",
+          "sinopse": "Em um mundo onde as estrelas estão desaparecendo misteriosamente, Ren Kisaragi, um jovem capaz de ouvir as memórias do universo, descobre que cada estrela apagada representa uma lembrança perdida da humanidade. Ao lado de uma garota que não possui passado, ele parte em uma jornada para encontrar a origem do fenômeno e impedir que o universo caia no esquecimento. Porém, quanto mais usa seu poder, mais suas próprias memórias desaparecem.",
+          "ano_lancamento": 2026,
+          "status": "em_andamento",
+          "volumetoria": "1 volume",
+          "genero": "Ação, Aventura, Fantasia, Mistério, Ficção Científica",
+          "classificacao_etaria": "12",
+          "url_capa": "https://placehold.co/400x600/10152b/ffffff?text=Ecos+do+Vazio"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE1ODc2MDUsImV4cCI6MTc5MTU5MTIwNSwidXNlcl9pZCI6NH0.aAROElNdinmdoHflrjsvUiCo841DsHzq4K3Jq3NoGCA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

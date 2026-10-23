@@ -1,0 +1,23 @@
+info:
+  name: Login e obter token jwt
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://localhost:8081/api/v1/auth/login
+  body:
+    type: json
+    data: |-
+      {
+        "email":"LucasDaniel@manga.base",
+        "senha":"123456"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

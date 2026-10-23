@@ -1,0 +1,24 @@
+info:
+  name: AtualizarPokemon
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: http://localhost:8082/api/v1/pokemons/78
+  body:
+    type: json
+    data: |-
+      {
+        "descricao":"Nova descrição atualizada via requisição PUT"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTA5NzkxNzgsImV4cCI6MTc5MDk4Mjc3OCwidXNlcl9pZCI6NH0.nBUv3dunNpxFan8bMIfF0o7OISOYvpGCIE_oBcg4C7Y
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

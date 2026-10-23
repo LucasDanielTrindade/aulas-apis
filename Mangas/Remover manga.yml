@@ -1,0 +1,18 @@
+info:
+  name: Remover manga
+  type: http
+  seq: 19
+
+http:
+  method: DELETE
+  url: http://localhost:8081/api/v1/mangas/1
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE1ODg3NzIsImV4cCI6MTc5MTU5MjM3MiwidXNlcl9pZCI6NH0.FNwV2P26ouUua6aByNymaZ0crqpVYqgJd0DPsPPqitE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

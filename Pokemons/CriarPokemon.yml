@@ -1,0 +1,29 @@
+info:
+  name: CriarPokemon
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: http://localhost:8082/api/v1/pokemons
+  body:
+    type: json
+    data: |-
+      {
+        "nome":"Pegasus Negro",
+        "numero":1025,
+        "tipo_primario":"fogo",  
+        "geracao":3,
+        "regiao":"Kanto",
+        "classe":"normal"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTA5NzkxNzgsImV4cCI6MTc5MDk4Mjc3OCwidXNlcl9pZCI6NH0.nBUv3dunNpxFan8bMIfF0o7OISOYvpGCIE_oBcg4C7Y
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

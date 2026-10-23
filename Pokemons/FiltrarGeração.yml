@@ -1,0 +1,20 @@
+info:
+  name: FiltrarGeração
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://localhost:8082/api/v1/pokemons?geracao=1
+  params:
+    - name: geracao
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,35 @@
+info:
+  name: Cadastrar novo manhwa ou gibi
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: http://localhost:8081/api/v1/mangas
+  body:
+    type: json
+    data: |-
+      {
+          "id": 2,
+          "titulo": "O Herdeiro das Sombras Eternas",
+          "tipo": "manhwa",
+          "autor": "Kang Min-seo",
+          "editora": "Moonlight Webtoon",
+          "sinopse": "Após ser traído por seu próprio clã, Lee Hwan desperta um poder proibido que lhe permite absorver as habilidades das sombras. Considerado fraco durante toda a vida, ele começa uma jornada de vingança e descobre que seu poder está ligado a uma antiga guerra entre humanos e entidades de outra dimensão. Agora, Hwan precisa decidir se usará sua força para proteger o mundo ou se tornará o monstro que todos temem.",
+          "ano_lancamento": 2026,
+          "status": "em_andamento",
+          "volumetoria": "1 temporada",
+          "genero": "Ação, Fantasia, Aventura, Sobrenatural, Drama",
+          "classificacao_etaria": "16",
+          "url_capa": "https://placehold.co/400x600/171326/ffffff?text=Herdeiro+das+Sombras"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE1ODc2MDUsImV4cCI6MTc5MTU5MTIwNSwidXNlcl9pZCI6NH0.aAROElNdinmdoHflrjsvUiCo841DsHzq4K3Jq3NoGCA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
