@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon - Versão Simples</title>
+</head>
+<body>
+    <h1>Detalhes do Pokémon</h1>
+    
+    <img id="poke-sprite" src="" alt="Imagem do Pokémon" width="150">
+    <p><strogn>ID:</strong> <span id="poke-id">Carregando...</span></p>
+    <p><strong>Nome:</strong> <span id="poke-nome">Carregando...</span></p>
+    <p><strong>Descrição:</strong> <span id="poke-descricao">Carregando...</span></p>
+    <p><strong>Tipo:</strong> <span id="poke-tipo">Carregando...</span></p>
+    <p><strong>Tipo Secundario:</strong> <span id="poke-tipo-sec">Carregando...</span></p>
+    <p><strong>Ataque:</strong> <span id="attack">Carregando...</span></p>
+    <p><strong>Defesa:</strong> <span id="defesa">Carregando...</span></p>
+    <p><strong>Classe:</strong> <span id="classe">Carregando...</span></p>
+    <script>
+        // Variáveis globais
+        let pokemonId;
+        let pokemonNome;
+        let pokemonDescricao;
+        let pokemonTipo;
+        let pokemonUrlSprite;
+        let pokemonTipoSec;
+        let attack;
+        let def;
+        let classe;
+        fetch('https://poke-base.onrender.com/pokemons/16')
+            .then(response => response.json())
+            .then(data => {
+                pokemonId = data.id;
+                pokemonNome = data.nome; 
+                pokemonDescricao = data.descricao; 
+                pokemonTipo = data.tipo_primario; 
+                pokemonUrlSprite = data.url_sprite;
+                pokemonTipoSec = data.tipo_secundario;
+                attack = data.ataque
+                def = data.defesa
+                classe = data.classe
+                // Colocando os resultados das variáveis nas tags de texto e imagem do HTML
+                document.getElementById('poke-id').innerText = pokemonId;
+                document.getElementById('defesa').innerText = def;
+                document.getElementById('poke-nome').innerText = pokemonNome;
+                document.getElementById('poke-tipo').innerText = pokemonTipo;
+                document.getElementById('poke-tipo-sec').innerText = pokemonTipoSec;
+                document.getElementById('attack').innerText = attack;
+                document.getElementById('poke-sprite').src = pokemonUrlSprite;
+                document.getElementById('classe').innerHTML = classe;
+                document.getElementById('poke-descricao').innerHTML = pokemonDescricao;
+            })
+            .catch(error => console.error("Erro ao buscar os dados da API: ", error));
+    </script>
+</body>
+</html>
