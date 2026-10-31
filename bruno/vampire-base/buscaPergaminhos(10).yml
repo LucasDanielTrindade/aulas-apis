@@ -1,0 +1,20 @@
+info:
+  name: buscaPergaminhos(10)
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: http://localhost:8080/api/v1/vampiros/buscar?q=Edward
+  params:
+    - name: q
+      value: Edward
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

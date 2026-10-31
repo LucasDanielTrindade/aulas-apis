@@ -1,0 +1,31 @@
+info:
+  name: RegistrarAbraço(26)
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: http://localhost:8080/api/v1/vampiros
+  body:
+    type: json
+    data: |-
+      {
+        "nome":"O Abraço",
+        "cla":"Carmilla",
+        "fraqueza":"Abraços",
+        "idade_humana":"67",
+        "idade_vampirica":"6767",
+        "status":"Acordado",
+        "sangue_favorito":"O-",
+        "habilidade_especial":"Abraçar"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTM0MDE4OTksImV4cCI6MTc5MzQwNTQ5OSwidXNlcl9pZCI6NH0.C9THSfy_YGFmWh2hcUs9GYAXJXaw2UB4ih6mJachoAA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

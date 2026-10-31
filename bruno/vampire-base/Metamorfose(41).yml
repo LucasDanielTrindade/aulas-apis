@@ -1,0 +1,24 @@
+info:
+  name: Metamorfose(41)
+  type: http
+  seq: 17
+
+http:
+  method: PUT
+  url: http://localhost:8080/api/v1/vampiros/3
+  body:
+    type: json
+    data: |-
+      {
+        "foto_perfil":"https://i.pinimg.com/736x/92/93/25/929325dde7fe417a373a1412697a7b1b.jpg"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTM0MDU3NjIsImV4cCI6MTc5MzQwOTM2MiwidXNlcl9pZCI6NH0._zRQHxj_Yu3OmES79l5GoaWgU9xM6xfGAdOhxcqHg3k
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

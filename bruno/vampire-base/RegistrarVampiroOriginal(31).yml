@@ -1,0 +1,31 @@
+info:
+  name: RegistrarVampiroOriginal(31)
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://localhost:8080/api/v1/vampiros
+  body:
+    type: json
+    data: |-
+      {
+        "nome":"Sonegador de impostos",
+        "cla":"Dracul",
+        "fraqueza":"Boletos",
+        "idade_humana":"20",
+        "idade_vampirica":"530",
+        "status":"Acordado",
+        "sangue_favorito":"Sintético",
+        "habilidade_especial":"Fugir da PF"
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTM0MDU3NjIsImV4cCI6MTc5MzQwOTM2MiwidXNlcl9pZCI6NH0._zRQHxj_Yu3OmES79l5GoaWgU9xM6xfGAdOhxcqHg3k
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

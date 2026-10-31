@@ -1,0 +1,26 @@
+opencollection: 1.0.0
+
+info:
+  name: vampire-base
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTM0MDU3NjIsImV4cCI6MTc5MzQwOTM2MiwidXNlcl9pZCI6NH0._zRQHxj_Yu3OmES79l5GoaWgU9xM6xfGAdOhxcqHg3k
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
