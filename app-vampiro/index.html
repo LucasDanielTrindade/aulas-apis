@@ -20,9 +20,9 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("foto-vamp").src = data.foto_perfil
-                    document.getElementById("nome-vamp").innerText = data.nome
-                    document.getElementById("status-vamp").innerText = data.status
-                    document.getElementById("cla-vamp").innerText = data.cla
+                    document.getElementById("nome-vamp").innerText = "Nome: "+data.nome
+                    document.getElementById("status-vamp").innerText = "Status: "+data.status
+                    document.getElementById("cla-vamp").innerText = "Clã: "+data.cla
                 })
         </script>
 
